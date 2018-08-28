@@ -2,27 +2,37 @@
 URL of problem: https://leetcode.com/problems/unique-morse-code-words/description/
 """
 import string
-from pprint import pprint
 
 def main():
+    # can change the list of words here
+    words = ["gin", "zen", "gig", "msg"]
     letters = list(string.ascii_lowercase)
     morse_codes = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+    # this creates a dictionary where the
+    # key is a letter and its value is the
+    # corresponding morse code for that letter
     mapping = dict(zip(letters, morse_codes))
-    # pprint(mapping)
+    # a set will only store the unique
+    # transformations, which is what we need
     transformations = set()
-    words = ["gin", "zen", "gig", "msg"]
     for w in words:
         t = []
+        # converting w to list beforehand
+        # makes program faster as in the
+        # Jewels and Stones (771) question
         word = list(w)
         for letter in word:
-            # print(letter)
+            # store the different
+            # parts in a list
             t.append(mapping[letter])
+        # using join() is much more
+        # efficient than concatenating
+        # repeatedly using '+'
         transf = ''.join(t)
-        # print(transf)
         transformations.add(transf)
 
+    print(transformations)
     print(len(transformations))
     # return len(transformations)
 
-# main(input("Give list of words: "))
 main()

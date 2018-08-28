@@ -5,8 +5,9 @@ URL of problem: https://leetcode.com/problems/jewels-and-stones/description/
 def main(J, S):
     num_jewels = 0
     jewels_set = set(J)
+    stones_set = list(S)
     # print(jewels_set)
-    for stone in S:
+    for stone in stones_set:
         if stone in jewels_set:
             num_jewels += 1
 

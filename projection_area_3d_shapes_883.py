@@ -4,7 +4,6 @@ URL of problem: https://leetcode.com/problems/projection-area-of-3d-shapes/descr
 
 def main(grid):
     dimension = len(grid)
-    xy_area = dimension*dimension
 
     # yz_dict = {}
     # for i in range(dimension):
@@ -38,6 +37,11 @@ def main(grid):
     #         xz_dict[x_val] = x_val
 
     # print(yz_dict)
+
+    xy_area = 0
+    for val in xyz_dict.values():
+        if val != 0:
+            xy_area += 1
 
     yz_dict = make_dict(xyz_dict, 1)
     yz_area = calc_area(yz_dict)

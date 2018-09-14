@@ -9,6 +9,8 @@ def main(string):
     main method for running the program.
     Argument:
         string - any sort of string
+    Prints:
+        Reverse of given string
     """
     # convert the string to
     # a list, reverse the list

@@ -15,20 +15,10 @@ def main(cpdomains):
 
         add_to_dict(count_dom_dict, domain, count)
 
-    # pprint(count_dom_dict)
     output = [' '.join([str(count), dom])
               for dom, count in count_dom_dict.items()]
     print(output)
     # return output
-    # for dot in range(num_dots):
-    #     print(domains.split('.', 1))
-
-    # for nd in range(num_dots):
-
-    # for dom in domains:
-    #     if dom not in count_dom_dict:
-    #         count_dom_dict[dom] += count
-    # print(count, domains)
 
 
 def add_to_dict(count_dom_dict, dom, count):
@@ -37,16 +27,6 @@ def add_to_dict(count_dom_dict, dom, count):
     else:
         count_dom_dict[dom] += int(count)
 
-
-def test():
-    d = {}
-    if 'p' not in d:
-        d['p'] = 6
-    else:
-        d['p'] += 2
-    print(d)
-
-# test()
 
 if __name__ == '__main__':
     main([

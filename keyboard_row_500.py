@@ -21,12 +21,7 @@ def main(words):
     r1 = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'}
     r2 = {'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'}
     r3 = {'z', 'x', 'c', 'v', 'b', 'n', 'm'}
-    # lists to store words that
-    # consist of letters from only
-    # r1 or r2 or r3
-    r1_words = []
-    r2_words = []
-    r3_words = []
+    output = []
     for word in words:
         # we convert the word to a set
         # since we are only concerned with
@@ -40,19 +35,20 @@ def main(words):
         # was made only using letters from that
         # specific row and fits our requirements.
         # we add that word to the list.
-        if w_set.issubset(r1):
-            r1_words.append(word)
-        elif w_set.issubset(r2):
-            r2_words.append(word)
-        elif w_set.issubset(r3):
-            r3_words.append(word)
 
-    # for this specific question, we actually
-    # don't need to have 3 separate lists for
-    # the words since we ended up adding them
-    # here, but they're useful if we're interested
-    # in words made from a specific row.
-    output = r1_words + r2_words + r3_words
+        # if w_set.issubset(r) evaluates to True
+        # for any r in [r1, r2, r3], the whole
+        # expression is True and we append the word
+        # to the output list.
+
+        # here we only have 3 sets. but it's useful
+        # to use the any() function if we have more
+        # than 3 sets. it allows us to avoid having
+        # to write multiple if-elif statements (like
+        # we did in the previous version of the solution)
+        if any(w_set.issubset(r) for r in [r1, r2, r3]):
+            output.append(word)
+
     print(output)
     # return output
 

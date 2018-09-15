@@ -7,6 +7,7 @@ Solved the following problems -
 		: Hamming Distance - 461
 		: Jewels and Stones - 771
 		: Judge Route Circle - 657
+		: Keyboard Row - 500
 		: Number Complement - 476
 		: Peak Index Mountain - 852
 		: Projection Area of 3D Shapes - 883

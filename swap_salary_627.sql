@@ -1,5 +1,6 @@
 /*
-URL of problem: https://leetcode.com/problems/swap-salary/description/
+URL of problem:
+https://leetcode.com/problems/swap-salary/description/
 */
 
 UPDATE salary

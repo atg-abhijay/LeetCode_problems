@@ -1,5 +1,6 @@
 /*
-URL of problem: https://leetcode.com/problems/big-countries/description/
+URL of problem:
+https://leetcode.com/problems/big-countries/description/
 */
 
 Select name, population, area

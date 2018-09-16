@@ -1,5 +1,6 @@
 """
-URL of problem: https://leetcode.com/problems/flipping-an-image/description/
+URL of problem:
+https://leetcode.com/problems/flipping-an-image/description/
 """
 
 

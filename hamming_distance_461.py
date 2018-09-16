@@ -1,6 +1,8 @@
 """
-URL of problem: https://leetcode.com/problems/hamming-distance/description/
+URL of problem:
+https://leetcode.com/problems/hamming-distance/description/
 """
+
 
 def main(x, y):
     xor_result = x ^ y

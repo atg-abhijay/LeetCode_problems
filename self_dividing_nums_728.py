@@ -1,6 +1,8 @@
 """
-URL of problem: https://leetcode.com/problems/self-dividing-numbers/description/
+URL of problem:
+https://leetcode.com/problems/self-dividing-numbers/description/
 """
+
 
 def main(left, right):
     nums = list(range(left, right+1))

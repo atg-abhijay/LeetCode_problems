@@ -1,6 +1,8 @@
 """
-URL of problem: https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
+URL of problem:
+https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
 """
+
 
 def main(A):
     max_num = 0

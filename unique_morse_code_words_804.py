@@ -1,13 +1,19 @@
 """
-URL of problem: https://leetcode.com/problems/unique-morse-code-words/description/
+URL of problem:
+https://leetcode.com/problems/unique-morse-code-words/description/
 """
 import string
+
 
 def main():
     # can change the list of words here
     words = ["gin", "zen", "gig", "msg"]
     letters = list(string.ascii_lowercase)
-    morse_codes = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+    morse_codes = [".-", "-...", "-.-.", "-..", ".",
+                   "..-.", "--.", "....", "..", ".---",
+                   "-.-", ".-..", "--", "-.", "---",
+                   ".--.", "--.-", ".-.", "...", "-",
+                   "..-", "...-", ".--", "-..-", "-.--", "--.."]
     # this creates a dictionary where the
     # key is a letter and its value is the
     # corresponding morse code for that letter

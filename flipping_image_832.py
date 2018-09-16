@@ -2,8 +2,9 @@
 URL of problem: https://leetcode.com/problems/flipping-an-image/description/
 """
 
+
 def main():
-    A = [[1,1,0],[1,0,1],[0,0,0]]
+    A = [[1, 1, 0], [1, 0, 1], [0, 0, 0]]
     B = []
     for row in A:
         r = reversed(row)

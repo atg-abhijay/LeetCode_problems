@@ -2,6 +2,7 @@
 URL of problem: https://leetcode.com/problems/jewels-and-stones/description/
 """
 
+
 def main(J, S):
     num_jewels = 0
     jewels_set = set(J)

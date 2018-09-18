@@ -9,13 +9,11 @@ def main(num):
     max_dist = 0
     dist_counter = -1
     encounter_start_one = False
-    # encounter_end_one = False
     for digit in bin_num:
         digit = int(digit)
         if encounter_start_one:
             if digit == 1:
                 dist_counter += 1
-                # encounter_end_one = True
                 if max_dist < dist_counter:
                     max_dist = dist_counter
 
@@ -28,14 +26,8 @@ def main(num):
                 encounter_start_one = True
                 dist_counter += 1
 
-
-        # if encounter_start_one and int(digit) == 1:
-        #     encounter_start_one = True
-        #     dist_counter += 1
-
     print("Max distance:", max_dist)
 
 
 if __name__ == '__main__':
-    # main(int(input("Give a number: ")))
-    main(22)
+    main(int(input("Give a number: ")))

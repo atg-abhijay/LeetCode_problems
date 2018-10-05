@@ -7,6 +7,7 @@ https://leetcode.com/problems/subdomain-visit-count/description/
 def main(cpdomains):
     """
     main method for running the program.
+
     Argument:
         cpdomains - list of count-paired domains
     Prints:

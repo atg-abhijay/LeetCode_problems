@@ -18,3 +18,24 @@ class Solution(object):
         :type nums: List[int]
         :rtype: TreeNode
         """
+        if len(nums) == 0:
+            return
+
+        max_num = max(nums)
+        max_idx = nums.index(max_num)
+
+        root = TreeNode(max_num)
+
+        left_nums = nums[:max_idx]
+        right_nums = nums[max_idx+1:]
+
+        root.left = self.constructMaximumBinaryTree(left_nums)
+        root.right = self.constructMaximumBinaryTree(right_nums)
+
+        return root
+
+    def test():
+        nums = [4, 5, 6]
+        print(nums[3:])
+
+    constructMaximumBinaryTree(self, [3,2,1,6,0,5])

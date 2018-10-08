@@ -25,6 +25,8 @@ class Solution(object):
         return leaf_sequence1 == leaf_sequence2
 
     def buildLeafSequence(self, root):
+        # using a depth first approach
+        # to locate the leaves
         leaf_sequence = []
         if root.left is None and root.right is None:
             leaf_sequence.append(root.val)

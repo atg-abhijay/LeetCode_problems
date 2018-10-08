@@ -18,3 +18,15 @@ class Solution(object):
         :type val: int
         :rtype: TreeNode
         """
+        if val == root.val:
+            return root
+        elif val > root.val:
+            if root.right is not None:
+                return self.searchBST(root.right, val)
+            else:
+                return None
+        else:
+            if root.left is not None:
+                return self.searchBST(root.left, val)
+            else:
+                return None

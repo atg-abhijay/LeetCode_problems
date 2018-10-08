@@ -17,3 +17,15 @@ class Solution(object):
         :type root: Node
         :rtype: List[int]
         """
+        post_order = []
+        if root:
+            if not root.children:
+                post_order.append(root.val)
+                return post_order
+
+            for child in root.children:
+                post_order += self.postorder(child)
+
+            post_order.append(root.val)
+
+        return post_order

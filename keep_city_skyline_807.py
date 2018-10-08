@@ -14,6 +14,7 @@ def main(grid):
 
     grid_transpose = [[0 for x in range(grid_length)]
                       for y in range(grid_length)]
+
     for i in range(grid_length):
         row = grid[i]
         for j in range(grid_length):
@@ -22,10 +23,16 @@ def main(grid):
     for row in grid_transpose:
         skyline_by_cols.append(max(row))
 
-
-
     # print(grid_transpose)
+    max_increase = 0
+    for i in range(grid_length):
+        for j in range(grid_length):
+            row_max = skyline_by_rows[i]
+            col_max = skyline_by_cols[j]
+            max_increase += min(row_max, col_max) - grid[i][j]
+            grid[i][j] = min(row_max, col_max)
 
+    print(max_increase)
 
 if __name__ == '__main__':
-    main([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+    main([[3, 0, 8, 4], [2, 4, 5, 7], [9, 2, 6, 3], [0, 3, 1, 0]])

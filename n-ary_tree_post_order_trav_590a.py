@@ -17,6 +17,7 @@ class Solution(object):
         :type root: Node
         :rtype: List[int]
         """
+        # ## RECURSIVE SOLUTION ## #
         post_order = []
         # checking if root is not null
         if root:

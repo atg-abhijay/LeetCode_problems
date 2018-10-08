@@ -5,8 +5,32 @@ https://leetcode.com/problems/island-perimeter/description/
 
 
 def main(grid):
-    pass
+    for i in range(len(grid)):
+        grid[i] = [0] + grid[i] + [0]
+
+    row_length = len(grid[0])
+    row_water = [0 for x in range(row_length)]
+    grid = [row_water] + grid + [row_water]
+
+    perimeter = 0
+    for i in range(1, len(grid)-1):
+        for j in range(1, len(grid[0])-1):
+            if grid[i][j] == 1:
+                if grid[i-1][j] == 0:
+                    perimeter += 1
+                if grid[i][j+1] == 0:
+                    perimeter += 1
+                if grid[i][j-1] == 0:
+                    perimeter += 1
+                if grid[i+1][j] == 0:
+                    perimeter += 1
+
+    print(perimeter)
+    # return perimeter
 
 
 if __name__ == '__main__':
-    main()
+    main([[0, 1, 0, 0],
+          [1, 1, 1, 0],
+          [0, 1, 0, 0],
+          [1, 1, 0, 0]])

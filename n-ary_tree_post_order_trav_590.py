@@ -18,14 +18,19 @@ class Solution(object):
         :rtype: List[int]
         """
         post_order = []
+        # checking if root is not null
         if root:
             if not root.children:
                 post_order.append(root.val)
                 return post_order
 
+            # call postorder() on the
+            # children of the root
             for child in root.children:
                 post_order += self.postorder(child)
 
+            # root gets appended
+            # after its children
             post_order.append(root.val)
 
         return post_order

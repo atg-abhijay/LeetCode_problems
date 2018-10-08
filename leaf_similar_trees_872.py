@@ -28,10 +28,11 @@ class Solution(object):
         leaf_sequence = []
         if root.left is None and root.right is None:
             leaf_sequence.append(root)
+            return leaf_sequence
         else:
             if root.left is not None:
-                self.buildLeafSequence(root.left)
+                leaf_sequence += self.buildLeafSequence(root.left)
             if root.right is not None:
-                self.buildLeafSequence(root.right)
+                leaf_sequence += self.buildLeafSequence(root.right)
 
         return leaf_sequence

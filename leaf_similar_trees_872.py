@@ -27,7 +27,7 @@ class Solution(object):
     def buildLeafSequence(self, root):
         leaf_sequence = []
         if root.left is None and root.right is None:
-            leaf_sequence.append(root)
+            leaf_sequence.append(root.val)
             return leaf_sequence
         else:
             if root.left is not None:

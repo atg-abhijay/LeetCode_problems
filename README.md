@@ -8,7 +8,6 @@ Solved the following problems -
 - Hamming Distance - 461
 - Insert into BST - 701
 - Jewels and Stones - 771
-- Judge Route Circle - 657
 - Keyboard Row - 500
 - Max Increase to Keep City Skyline - 807
 - Maximum Binary Tree - 654

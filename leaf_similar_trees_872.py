@@ -19,3 +19,19 @@ class Solution(object):
         :type root2: TreeNode
         :rtype: bool
         """
+        leaf_sequence1 = self.buildLeafSequence(root1)
+        leaf_sequence2 = self.buildLeafSequence(root2)
+
+        return leaf_sequence1 == leaf_sequence2
+
+    def buildLeafSequence(self, root):
+        leaf_sequence = []
+        if root.left is None and root.right is None:
+            leaf_sequence.append(root)
+        else:
+            if root.left is not None:
+                self.buildLeafSequence(root.left)
+            if root.right is not None:
+                self.buildLeafSequence(root.right)
+
+        return leaf_sequence

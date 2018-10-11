@@ -17,3 +17,34 @@ class Solution(object):
         :type root: Node
         :rtype: List[int]
         """
+        # ## ITERATIVE SOLUTION ## #
+        # post_order_trav = []
+        # if root:
+        #     post_order_trav.append(root)
+        #     for index, node in enumerate(post_order_trav):
+        #         print(index, node)
+        #         if node.children:
+        #             node.children.reverse()
+        #             post_order_trav = (post_order_trav[:index+1] +
+        #                                node.children +
+        #                                post_order_trav[index+1:])
+
+        post_order_trav = []
+        if root:
+            post_order_trav.append(root)
+            index = 0
+            while 1:
+                node = post_order_trav[index]
+                if node.children:
+                    node.children.reverse()
+                    post_order_trav = (post_order_trav[:index+1] +
+                                       node.children +
+                                       post_order_trav[index+1:])
+
+                if index == len(post_order_trav)-1:
+                    break
+
+                index += 1
+
+        post_order_vals = [node.val for node in reversed(post_order_trav)]
+        return post_order_vals

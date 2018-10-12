@@ -18,6 +18,15 @@ class Solution(object):
         :type root: TreeNode
         :rtype: TreeNode
         """
+        # evaluate the children of the root
+        # recursively first. the children
+        # may or may not get removed depending
+        # on whether they have a subtree containing
+        # 1. after that, evaluate the root itself.
+        # if the root is 0 and has no children, then
+        # it has to be set None. so, the tree gets
+        # pruned after the evaluation of a node's children
+        # and then the node itself.
         if root:
             root.left = self.pruneTree(root.left)
             root.right = self.pruneTree(root.right)

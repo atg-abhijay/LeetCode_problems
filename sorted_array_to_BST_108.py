@@ -32,8 +32,7 @@ class Solution(object):
         pointer = int(floor(len(nums)/2))
         node = TreeNode(nums[pointer])
         node.left = self.sortedArrayToBST(nums[0:pointer])
-        if pointer != len(nums)-1:
-            node.right = self.sortedArrayToBST(nums[pointer+1:])
+        node.right = self.sortedArrayToBST(nums[pointer+1:])
 
         return node
 

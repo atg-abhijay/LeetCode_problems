@@ -1,3 +1,6 @@
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 /**
  * URL of problem:
  * https://leetcode.com/problems/range-sum-of-bst/
@@ -21,6 +24,21 @@ class TreeNode {
 
 class Solution938 {
     public int rangeSumBST(TreeNode root, int L, int R) {
-        return -1;
+        int rangeSum = 0;
+        Queue<TreeNode> q = new ArrayDeque<TreeNode>();
+        q.add(root);
+        while(!q.isEmpty()) {
+            TreeNode node = q.poll();
+            if(L <= node.val && node.val <= R) {
+                rangeSum += node.val;
+            }
+            if(node.left != null ) {
+                q.add(node.left);
+            }
+            if(node.right != null) {
+                q.add(node.right);
+            }
+        }
+        return rangeSum;
     }
 }

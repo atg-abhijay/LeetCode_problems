@@ -26,6 +26,9 @@ class TreeNode {
 class Solution938 {
     public int rangeSumBST(TreeNode root, int L, int R) {
         int rangeSum = 0;
+        /**
+         * tree is explored using DFS
+         */
         Stack<TreeNode> stack = new Stack<TreeNode>();
         stack.push(root);
         while(!stack.isEmpty()) {
@@ -36,9 +39,19 @@ class Solution938 {
             if(L <= node.val && node.val <= R) {
                 rangeSum += node.val;
             }
+            /**
+             * if R is greater, then there
+             * might be children who are
+             * smaller than R as well
+             */
             if(R > node.val) {
                 stack.push(node.right);
             }
+            /**
+             * if L is smaller, then there
+             * might be children who are
+             * larger than L as well
+             */
             if(L < node.val) {
                 stack.push(node.left);
             }

@@ -27,11 +27,23 @@ class Solution938 {
         int rangeSum = 0;
         Queue<TreeNode> q = new ArrayDeque<TreeNode>();
         q.add(root);
+        /**
+         * exploring tree with BFS. not exploring
+         * some nodes as explained below
+         */
         while(!q.isEmpty()) {
             TreeNode node = q.poll();
             if(L <= node.val && node.val <= R) {
                 rangeSum += node.val;
             }
+
+            /**
+             * if the left child has a value
+             * geq than L, we can add it to
+             * the queue. if it is less than L,
+             * we can only add it to the queue
+             * if it has a right child
+             */
             TreeNode leftChild = node.left;
             if(leftChild != null) {
                 if(leftChild.val >= L) {
@@ -44,6 +56,13 @@ class Solution938 {
                 }
             }
 
+            /**
+             * if the right child has a value
+             * leq than R, then it can be added
+             * to the queue. if it is greater than
+             * R, it can only be added to the queue
+             * if it has a left child
+             */
             TreeNode rightChild = node.right;
             if(rightChild != null) {
                 if(rightChild.val <= R) {

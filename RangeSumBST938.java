@@ -1,5 +1,6 @@
 import java.util.ArrayDeque;
 import java.util.Queue;
+import java.util.Stack;
 
 /**
  * URL of problem:
@@ -25,54 +26,21 @@ class TreeNode {
 class Solution938 {
     public int rangeSumBST(TreeNode root, int L, int R) {
         int rangeSum = 0;
-        Queue<TreeNode> q = new ArrayDeque<TreeNode>();
-        q.add(root);
-        /**
-         * exploring tree with BFS. not exploring
-         * some nodes as explained below
-         */
-        while(!q.isEmpty()) {
-            TreeNode node = q.poll();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.push(root);
+        while(!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            if(node == null) {
+                continue;
+            }
             if(L <= node.val && node.val <= R) {
                 rangeSum += node.val;
             }
-
-            /**
-             * if the left child has a value
-             * geq than L, we can add it to
-             * the queue. if it is less than L,
-             * we can only add it to the queue
-             * if it has a right child
-             */
-            TreeNode leftChild = node.left;
-            if(leftChild != null) {
-                if(leftChild.val >= L) {
-                    q.add(leftChild);
-                }
-                else {
-                    if(leftChild.right != null) {
-                        q.add(leftChild);
-                    }
-                }
+            if(R > node.val) {
+                stack.push(node.right);
             }
-
-            /**
-             * if the right child has a value
-             * leq than R, then it can be added
-             * to the queue. if it is greater than
-             * R, it can only be added to the queue
-             * if it has a left child
-             */
-            TreeNode rightChild = node.right;
-            if(rightChild != null) {
-                if(rightChild.val <= R) {
-                    q.add(rightChild);
-                }
-                else {
-                    if(rightChild.left != null) {
-                        q.add(rightChild);
-                    }
-                }
+            if(L < node.val) {
+                stack.push(node.left);
             }
         }
         return rangeSum;

@@ -32,11 +32,28 @@ class Solution938 {
             if(L <= node.val && node.val <= R) {
                 rangeSum += node.val;
             }
-            if(node.left != null ) {
-                q.add(node.left);
+            TreeNode leftChild = node.left;
+            if(leftChild != null) {
+                if(leftChild.val >= L) {
+                    q.add(leftChild);
+                }
+                else {
+                    if(leftChild.right != null) {
+                        q.add(leftChild);
+                    }
+                }
             }
-            if(node.right != null) {
-                q.add(node.right);
+
+            TreeNode rightChild = node.right;
+            if(rightChild != null) {
+                if(rightChild.val <= R) {
+                    q.add(rightChild);
+                }
+                else {
+                    if(rightChild.left != null) {
+                        q.add(rightChild);
+                    }
+                }
             }
         }
         return rangeSum;

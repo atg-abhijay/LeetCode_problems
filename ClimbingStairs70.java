@@ -1,7 +1,7 @@
 /**
  * URL of problem:
  * https://leetcode.com/problems/climbing-stairs/
- */
+*/
 
 public class ClimbingStairs70 {
     public static void main(String[] args) {

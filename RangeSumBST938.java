@@ -1,5 +1,3 @@
-import java.util.ArrayDeque;
-import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -10,6 +8,8 @@ import java.util.Stack;
 public class RangeSumBST938 {
     public static void main(String[] args) {
         Solution938 sol = new Solution938();
+        TreeNode root = new TreeNode(0);
+        int L = -1; int R = -1;
         int rangeSum = sol.rangeSumBST(root, L, R);
         System.out.println(rangeSum);
     }

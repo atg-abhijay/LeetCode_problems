@@ -5,7 +5,7 @@ import java.util.Deque;
 /**
  * URL of problem:
  * https://leetcode.com/problems/reveal-cards-in-increasing-order/
-*/
+ */
 
 public class RevealCardsIncOrder950 {
     public static void main(String[] args) {
@@ -21,6 +21,13 @@ public class RevealCardsIncOrder950 {
 
 class Solution950 {
     public int[] deckRevealedIncreasing(int[] deck) {
+        /**
+         * sort the given deck of cards. use a double
+         * ended queue (deque) to make insertions at
+         * the beginning and removals at the end easy.
+         * whenever a new element has to be added, take
+         * the last element and move it to the start.
+         */
         Arrays.sort(deck);
         int deckSize = deck.length;
         Deque<Integer> dq = new ArrayDeque<Integer>();

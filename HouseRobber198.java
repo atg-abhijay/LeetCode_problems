@@ -18,9 +18,15 @@ class Solution198 {
         }
         int[] maxAmountRob = new int[nums.length+1];
         maxAmountRob[0] = 0;
+        /**
+         * NOTE here that the maximum amount possible to rob
+         * up & until house i is stored in maxAmountRob[i+1]
+         */
         maxAmountRob[1] = nums[0];
+        int index = 1;
         for(int i = 2; i < maxAmountRob.length; i++) {
-            maxAmountRob[i] = Math.max(maxAmountRob[i-1], nums[i-1] + maxAmountRob[i-2]);
+            maxAmountRob[i] = Math.max(maxAmountRob[i-1], nums[index] + maxAmountRob[i-2]);
+            index++;
         }
         return maxAmountRob[maxAmountRob.length-1];
     }

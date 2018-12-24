@@ -23,10 +23,10 @@ class Solution198 {
          * up & until house i is stored in maxAmountRob[i+1]
          */
         maxAmountRob[1] = nums[0];
-        int index = 1;
+        int currentHouse = 1;
         for(int i = 2; i < maxAmountRob.length; i++) {
-            maxAmountRob[i] = Math.max(maxAmountRob[i-1], nums[index] + maxAmountRob[i-2]);
-            index++;
+            maxAmountRob[i] = Math.max(maxAmountRob[i-1], nums[currentHouse] + maxAmountRob[i-2]);
+            currentHouse++;
         }
         return maxAmountRob[maxAmountRob.length-1];
     }

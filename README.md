@@ -2,28 +2,28 @@
   Platform for coding questions in different fields and at different levels. Using it to expand ways of thinking and increase proficiency as a coder
   
 Solved the following problems -
-- Array Partition I - 561
-- Big Countries - 595
-- Binary Gap - 868
-- Flipping An Image - 832
-- Hamming Distance - 461
-- Insert into BST - 701
-- Jewels and Stones - 771
-- Keyboard Row - 500
-- Max Increase to Keep City Skyline - 807
-- Maximum Binary Tree - 654
-- Not Boring Movies - 620
-- Number Complement - 476
-- Peak Index in a Mountain Array - 852
-- Projection Area of 3D Shapes - 883
-- Reverse Integer - 7
-- Reverse String - 344
-- Reverse Words in a String III - 557
-- Robot Return to Origin - 657
-- Self Dividing Numbers - 728
-- Shortest Distance to a Character - 821
-- Subdomain Visit Count - 811
-- Swap Salary - 627
-- To Lower Case - 709
-- Transpose Matrix - 867
-- Unique Morse Code Words - 804
+- [Array Partition I - 561](https://leetcode.com/problems/array-partition-i/description/)
+- [Big Countries - 595](https://leetcode.com/problems/big-countries/description/)
+- [Binary Gap - 868](https://leetcode.com/problems/binary-gap/description/)
+- [Flipping An Image - 832](https://leetcode.com/problems/flipping-an-image/description/)
+- [Hamming Distance - 461](https://leetcode.com/problems/hamming-distance/description/)
+- [Insert into BST - 701](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/)
+- [Jewels and Stones - 771](https://leetcode.com/problems/jewels-and-stones/description/)
+- [Keyboard Row - 500](https://leetcode.com/problems/keyboard-row/description/)
+- [Max Increase to Keep City Skyline - 807](https://leetcode.com/problems/max-increase-to-keep-city-skyline/description/)
+- [Maximum Binary Tree - 654](https://leetcode.com/problems/maximum-binary-tree/description/)
+- [Not Boring Movies - 620](https://leetcode.com/problems/not-boring-movies/description/)
+- [Number Complement - 476](https://leetcode.com/problems/number-complement/description/)
+- [Peak Index in a Mountain Array - 852](https://leetcode.com/problems/peak-index-in-a-mountain-array/description/)
+- [Projection Area of 3D Shapes - 883](https://leetcode.com/problems/projection-area-of-3d-shapes/description/)
+- [Reverse Integer - 7](https://leetcode.com/problems/reverse-integer/description/)
+- [Reverse String - 344](https://leetcode.com/problems/reverse-string/description/)
+- [Reverse Words in a String III - 557](https://leetcode.com/problems/reverse-words-in-a-string-iii/description/)
+- [Robot Return to Origin - 657](https://leetcode.com/problems/robot-return-to-origin/description/)
+- [Self Dividing Numbers - 728](https://leetcode.com/problems/self-dividing-numbers/description/)
+- [Shortest Distance to a Character - 821](https://leetcode.com/problems/shortest-distance-to-a-character/description/)
+- [Subdomain Visit Count - 811](https://leetcode.com/problems/subdomain-visit-count/description/)
+- [Swap Salary - 627](https://leetcode.com/problems/swap-salary/description/)
+- [To Lower Case - 709](https://leetcode.com/problems/to-lower-case/description/)
+- [Transpose Matrix - 867](https://leetcode.com/problems/transpose-matrix/description/)
+- [Unique Morse Code Words - 804](https://leetcode.com/problems/unique-morse-code-words/description/)

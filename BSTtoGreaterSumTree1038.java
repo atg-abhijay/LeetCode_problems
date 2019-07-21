@@ -19,6 +19,19 @@ public class BSTtoGreaterSumTree1038 {
 
 class Solution1038 {
     public TreeNode bstToGst(TreeNode root) {
-        return new TreeNode(-1);
+        reverseInOrderTraversal(root, 0);
+        return root;
+    }
+
+    private static int reverseInOrderTraversal(TreeNode currentNode, int valToAdd) {
+        if(currentNode.right != null) {
+            valToAdd = reverseInOrderTraversal(currentNode.right, valToAdd);
+        }
+        currentNode.val += valToAdd;
+        if(currentNode.left != null) {
+            valToAdd = reverseInOrderTraversal(currentNode.left, currentNode.val);
+            return valToAdd;
+        }
+        return currentNode.val;
     }
 }

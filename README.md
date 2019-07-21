@@ -1,6 +1,6 @@
 # LeetCode_problems
   Platform for coding questions in different fields and at different levels. Using it to expand ways of thinking and increase proficiency as a coder
-  
+
 Solved the following problems -
 
 | Problem       | Solution |
@@ -8,6 +8,7 @@ Solved the following problems -
 | [Array Partition I - 561](https://leetcode.com/problems/array-partition-i/description/) | [Link](https://github.com/atg-abhijay/LeetCode_problems/blob/master/array_partition_i_561.py)
 | [Big Countries - 595](https://leetcode.com/problems/big-countries/description/) | [Link](https://github.com/atg-abhijay/LeetCode_problems/blob/master/big_countries_595.sql)
 | [Binary Gap - 868](https://leetcode.com/problems/binary-gap/description/) | [Link](https://github.com/atg-abhijay/LeetCode_problems/blob/master/binary_gap_868.py)
+| [BST to Greater Sum Tree - 1038](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree) | [Link](./BSTtoGreaterSumTree1038.java)
 | [Flipping An Image - 832](https://leetcode.com/problems/flipping-an-image/description/) | [Link](https://github.com/atg-abhijay/LeetCode_problems/blob/master/flipping_image_832.py)
 | [Hamming Distance - 461](https://leetcode.com/problems/hamming-distance/description/) | [Link](https://github.com/atg-abhijay/LeetCode_problems/blob/master/hamming_distance_461.py)
 | [Insert into BST - 701](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/) | [Link](https://github.com/atg-abhijay/LeetCode_problems/blob/master/insert_into_BST_701.py)

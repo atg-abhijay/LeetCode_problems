@@ -10,7 +10,14 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        pass
+        max_profit = 0
+        for i, purchase_price in enumerate(prices[:-1]):
+            j = i+1
+            for sell_price in prices[i+1:]:
+                if sell_price - purchase_price > max_profit:
+                    max_profit = sell_price - purchase_price
+
+        return max_profit
 
 
 def main():

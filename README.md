@@ -6,9 +6,11 @@ Solved the following problems -
 | Problem       | Solution |
 | --------------|----------|
 | [Array Partition I - 561](https://leetcode.com/problems/array-partition-i/description/) | [Link](./array_partition_i_561.py)
+| [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Link](./best_time_buy_sell_stock_121.py)
 | [Big Countries - 595](https://leetcode.com/problems/big-countries/description/) | [Link](./big_countries_595.sql)
 | [Binary Gap - 868](https://leetcode.com/problems/binary-gap/description/) | [Link](./binary_gap_868.py)
 | [BST to Greater Sum Tree - 1038](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree) | [Link](./BSTtoGreaterSumTree1038.java)
+| [Contains Duplicate - 217](https://leetcode.com/problems/contains-duplicate/) | [Link](./contains_duplicate_217.py)
 | [Flipping An Image - 832](https://leetcode.com/problems/flipping-an-image/description/) | [Link](./flipping_image_832.py)
 | [Hamming Distance - 461](https://leetcode.com/problems/hamming-distance/description/) | [Link](./hamming_distance_461.py)
 | [Insert into BST - 701](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/) | [Link](./insert_into_BST_701.py)
@@ -30,5 +32,5 @@ Solved the following problems -
 | [Swap Salary - 627](https://leetcode.com/problems/swap-salary/description/) | [Link](./swap_salary_627.sql)
 | [To Lower Case - 709](https://leetcode.com/problems/to-lower-case/description/) | [Link](./to_lower_case_709.py)
 | [Transpose Matrix - 867](https://leetcode.com/problems/transpose-matrix/description/) | [Link](./transpose_matrix_867.py)
-| [Unique Morse Code Words - 804](https://leetcode.com/problems/unique-morse-code-words/description/) | [Link](./unique_morse_code_words_804.py) |
-| [Contains Duplicate - 217](https://leetcode.com/problems/contains-duplicate/) | [Link](./contains_duplicate_217.py) |
+| [Two Sum - 1](https://leetcode.com/problems/two-sum/) | [Link](./two_sum_1.py)
+| [Unique Morse Code Words - 804](https://leetcode.com/problems/unique-morse-code-words/description/) | [Link](./unique_morse_code_words_804.py)

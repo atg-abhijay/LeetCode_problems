@@ -10,7 +10,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        pass
+        distinct_nums = set(nums)
+        if len(nums) != len(distinct_nums):
+            return True
+
+        return False
 
 
 def main():

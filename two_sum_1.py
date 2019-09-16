@@ -11,7 +11,13 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        pass
+        for i, first_num in enumerate(nums[:-1]):
+            j = i+1
+            for second_num in nums[i+1:]:
+                if first_num + second_num == target:
+                    return [i, j]
+
+                j += 1
 
 
 def main():

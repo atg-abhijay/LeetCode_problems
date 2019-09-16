@@ -30,4 +30,5 @@ Solved the following problems -
 | [Swap Salary - 627](https://leetcode.com/problems/swap-salary/description/) | [Link](./swap_salary_627.sql)
 | [To Lower Case - 709](https://leetcode.com/problems/to-lower-case/description/) | [Link](./to_lower_case_709.py)
 | [Transpose Matrix - 867](https://leetcode.com/problems/transpose-matrix/description/) | [Link](./transpose_matrix_867.py)
-| [Unique Morse Code Words - 804](https://leetcode.com/problems/unique-morse-code-words/description/) | [Link](./unique_morse_code_words_804.py)
+| [Unique Morse Code Words - 804](https://leetcode.com/problems/unique-morse-code-words/description/) | [Link](./unique_morse_code_words_804.py) |
+| [Contains Duplicate - 217](https://leetcode.com/problems/contains-duplicate/) | [Link](./contains_duplicate_217.py) |

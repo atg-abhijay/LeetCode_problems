@@ -10,12 +10,17 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
+        if not prices:
+            return 0
+
         max_profit = 0
-        for i, purchase_price in enumerate(prices[:-1]):
-            j = i+1
-            for sell_price in prices[i+1:]:
-                if sell_price - purchase_price > max_profit:
-                    max_profit = sell_price - purchase_price
+        purchase_price = prices[0]
+        for selling_price in prices:
+            if selling_price < purchase_price:
+                purchase_price = selling_price
+            else:
+                if selling_price - purchase_price > max_profit:
+                    max_profit = selling_price - purchase_price
 
         return max_profit
 

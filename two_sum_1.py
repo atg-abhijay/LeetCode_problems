@@ -11,11 +11,13 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        d = {num: i for i, num in enumerate(nums)}
+        d = {}
         for i, num in enumerate(nums):
             complement = target - num
-            if complement in d and d[complement] != i:
-                return [i, d[complement]]
+            if complement in d:
+                return [d[complement], i]
+
+            d[num] = i
 
 
 def main():

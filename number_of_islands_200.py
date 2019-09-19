@@ -27,7 +27,6 @@ class Solution(object):
             for j, piece in enumerate(row):
                 pieces[i].append(GridPiece(int(piece), i, j))
 
-        # pprint([piece.is_land for row in pieces for piece in row])
         for row in pieces:
             for piece in row:
                 if self.shouldVisit(piece):
@@ -39,24 +38,17 @@ class Solution(object):
 
     def visitNeighbours(self, pieces: List[List[GridPiece]], src_piece: GridPiece):
         src_row, src_col = src_piece.row, src_piece.column
-        if src_row != 0 and self.shouldVisit(pieces[src_row-1][src_col]):
-            pieces[src_row-1][src_col].island_number = src_piece.island_number
-            self.visitNeighbours(pieces, pieces[src_row-1][src_col])
+        last_row_idx, last_col_idx = len(pieces)-1, len(pieces[0])-1
 
-        if src_col != len(pieces[0]) - 1 and self.shouldVisit(pieces[src_row][src_col+1]):
-            pieces[src_row][src_col+1].island_number = src_piece.island_number
-            self.visitNeighbours(pieces, pieces[src_row][src_col+1])
-
-        if src_row != len(pieces) - 1 and self.shouldVisit(pieces[src_row+1][src_col]):
-            pieces[src_row+1][src_col].island_number = src_piece.island_number
-            self.visitNeighbours(pieces, pieces[src_row+1][src_col])
-
-        if src_col != 0 and self.shouldVisit(pieces[src_row][src_col-1]):
-            pieces[src_row][src_col-1].island_number = src_piece.island_number
-            self.visitNeighbours(pieces, pieces[src_row][src_col-1])
+        for row_diff, col_diff in [[-1, 0], [0, 1], [1, 0], [0, -1]]:
+            if 0 <= src_row+row_diff <= last_row_idx and 0 <= src_col+col_diff <= last_col_idx:
+                nb_piece = pieces[src_row+row_diff][src_col+col_diff]
+                if(self.shouldVisit(nb_piece)):
+                    nb_piece.island_number = src_piece.island_number
+                    self.visitNeighbours(pieces, nb_piece)
 
     def shouldVisit(self, piece: GridPiece):
-        if piece and piece.is_land and not piece.island_number:
+        if piece.is_land and not piece.island_number:
             return True
 
         return False

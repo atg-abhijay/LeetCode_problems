@@ -20,6 +20,7 @@ Solved the following problems -
 | [Maximum Binary Tree - 654](https://leetcode.com/problems/maximum-binary-tree/description/) | [Link](./maximum_binary_tree_654.py)
 | [Not Boring Movies - 620](https://leetcode.com/problems/not-boring-movies/description/) | [Link](./not_boring_movies_620.sql)
 | [Number Complement - 476](https://leetcode.com/problems/number-complement/description/) | [Link](./number_complement_476.py)
+| [Number of Islands - 200](https://leetcode.com/problems/number-of-islands/) | [Link](./number_of_islands_200.py)
 | [Peak Index in a Mountain Array - 852](https://leetcode.com/problems/peak-index-in-a-mountain-array/description/) | [Link](./peak_index_mountain_852.py)
 | [Projection Area of 3D Shapes - 883](https://leetcode.com/problems/projection-area-of-3d-shapes/description/) | [Link](./projection_area_3d_shapes_883.py)
 | [Reverse Integer - 7](https://leetcode.com/problems/reverse-integer/description/) | [Link](./reverse_int_7.py)

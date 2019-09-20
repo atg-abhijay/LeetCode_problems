@@ -20,6 +20,8 @@ class Solution(object):
         :type grid: List[List[str]]
         :rtype: int
         """
+        # Use the given grid to create a
+        # nested list of GridPiece objects
         pieces: List[List[GridPiece]] = []
         total_islands = 0
         for i, row in enumerate(grid):
@@ -27,6 +29,11 @@ class Solution(object):
             for j, piece in enumerate(row):
                 pieces[i].append(GridPiece(int(piece), i, j))
 
+        # If there is a piece of land that is not
+        # part of an island yet, assign it as the
+        # first piece of a new island and run a DFS
+        # from this piece to find the other pieces
+        # for this island.
         for row in pieces:
             for piece in row:
                 if self.shouldVisit(piece):
@@ -40,6 +47,11 @@ class Solution(object):
         src_row, src_col = src_piece.row, src_piece.column
         last_row_idx, last_col_idx = len(pieces)-1, len(pieces[0])-1
 
+        # The diffs correspond to diffs needed to get to the North,
+        # East, South and West pieces respectively from the source piece.
+        # Check that the indices don't go out of bound. If the neighbouring
+        # piece is land and is not part of an island yet, make it a part of
+        # the same island as the source piece and run a DFS from the neighbouring piece.
         for row_diff, col_diff in [[-1, 0], [0, 1], [1, 0], [0, -1]]:
             if 0 <= src_row+row_diff <= last_row_idx and 0 <= src_col+col_diff <= last_col_idx:
                 nb_piece = pieces[src_row+row_diff][src_col+col_diff]

@@ -16,6 +16,7 @@ Solved the following problems -
 | [Insert into BST - 701](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/) | [Link](./insert_into_BST_701.py)
 | [Jewels and Stones - 771](https://leetcode.com/problems/jewels-and-stones/description/) | [Link](./jewels_stones_771.py)
 | [Keyboard Row - 500](https://leetcode.com/problems/keyboard-row/description/) | [Link](./keyboard_row_500.py)
+| [Max Area of Island - 695](https://leetcode.com/problems/max-area-of-island/) | [Link](./max_area_of_island_695.py)
 | [Max Increase to Keep City Skyline - 807](https://leetcode.com/problems/max-increase-to-keep-city-skyline/description/) | [Link](./keep_city_skyline_807.py)
 | [Maximum Binary Tree - 654](https://leetcode.com/problems/maximum-binary-tree/description/) | [Link](./maximum_binary_tree_654.py)
 | [Not Boring Movies - 620](https://leetcode.com/problems/not-boring-movies/description/) | [Link](./not_boring_movies_620.sql)

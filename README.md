@@ -1,5 +1,8 @@
 # LeetCode Problems
-  Platform for coding questions in different fields and at different levels. Using it to expand ways of thinking and increase proficiency as a coder
+
+My LeetCode profile: [atg_abhijay](https://leetcode.com/atg_abhijay/)
+
+Platform for coding questions in different fields and at different levels. Using it to expand ways of thinking and increase proficiency as a coder.
 
 Solved the following problems -
 

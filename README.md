@@ -5,15 +5,15 @@ Solved the following problems -
 
 | Problem       | Solution |
 | --------------|----------|
-| [Array Partition I - 561](https://leetcode.com/problems/array-partition-i/description/) | [Link](./array_partition_i_561.py)
 | [All Paths From Source to Target - 797](https://leetcode.com/problems/all-paths-from-source-to-target/) | [Link](./all_paths_source_to_target_797.py)
+| [Array Partition I - 561](https://leetcode.com/problems/array-partition-i/description/) | [Link](./array_partition_i_561.py)
 | [Baseball Game - 682](https://leetcode.com/problems/baseball-game) | [Link](./baseball_game_682.py)
 | [Battleships in a Board - 419](https://leetcode.com/problems/battleships-in-a-board) | [Link](./battleships_in_board_419.py)
 | [Best Time to Buy and Sell Stock - 121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Link](./best_time_buy_sell_stock_121.py)
 | [Big Countries - 595](https://leetcode.com/problems/big-countries/description/) | [Link](./big_countries_595.sql)
 | [Binary Gap - 868](https://leetcode.com/problems/binary-gap/description/) | [Link](./binary_gap_868.py)
+| [Binary Search Tree to Greater Sum Tree - 1038](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree) | [Link](./BSTtoGreaterSumTree1038.java)
 | [Binary Tree Pruning - 814](https://leetcode.com/problems/binary-tree-pruning) | [Link](./binary_tree_pruning_814.py)
-| [BST to Greater Sum Tree - 1038](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree) | [Link](./BSTtoGreaterSumTree1038.java)
 | [Climbing Stairs - 70](https://leetcode.com/problems/climbing-stairs) | [Link](./ClimbingStairs70.java)
 | [Contains Duplicate - 217](https://leetcode.com/problems/contains-duplicate/) | [Link](./contains_duplicate_217.py)
 | [Convert Sorted Array to Binary Search Tree - 108](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | [Link](./sorted_array_to_BST_108a.py)

@@ -1,6 +1,6 @@
 # LeetCode Problems
 
-My LeetCode profile: [atg_abhijay](https://leetcode.com/atg_abhijay/)
+My LeetCode profile: [atg-abhijay](https://leetcode.com/atg-abhijay/)
 
 Platform for coding questions in different fields and at different levels. Using it to expand ways of thinking and increase proficiency as a coder.
 

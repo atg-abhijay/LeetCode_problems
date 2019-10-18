@@ -21,6 +21,8 @@ class Solution(object):
         for index, neighbours in enumerate(rooms):
             room_nodes.append(Room(index, neighbours))
 
+        # Use DFS to explore the rooms. At the end,
+        # check if all rooms have been visited.
         queue = [room_nodes[0]]
         while queue:
             room = queue.pop(0)

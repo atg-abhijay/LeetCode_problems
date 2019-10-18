@@ -30,6 +30,7 @@ Solved the following problems -
 | [Island Perimeter - 463](https://leetcode.com/problems/island-perimeter) | [Link](./island_perimeter_463.py)
 | [Jewels and Stones - 771](https://leetcode.com/problems/jewels-and-stones/description/) | [Link](./jewels_stones_771.py)
 | [Keyboard Row - 500](https://leetcode.com/problems/keyboard-row/description/) | [Link](./keyboard_row_500.py)
+| [Keys and Rooms - 841](https://leetcode.com/problems/keys-and-rooms/) | [Link](./keys_and_rooms_841.py)
 | [Leaf-Similar Trees - 872](https://leetcode.com/problems/leaf-similar-trees) | [Link](./leaf_similar_trees_872.py)
 | [Max Area of Island - 695](https://leetcode.com/problems/max-area-of-island/) | [Link](./max_area_of_island_695.py)
 | [Max Increase to Keep City Skyline - 807](https://leetcode.com/problems/max-increase-to-keep-city-skyline/description/) | [Link](./keep_city_skyline_807.py)

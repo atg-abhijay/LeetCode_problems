@@ -15,6 +15,7 @@ Solved the following problems -
 | [Best Time to Buy and Sell Stock - 121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Link](./best_time_buy_sell_stock_121.py)
 | [Big Countries - 595](https://leetcode.com/problems/big-countries/description/) | [Link](./big_countries_595.sql)
 | [Binary Gap - 868](https://leetcode.com/problems/binary-gap/description/) | [Link](./binary_gap_868.py)
+| [Binary Number with Alternating Bits - 693](https://leetcode.com/problems/binary-number-with-alternating-bits/) | [Link](./BinaryNumberAlternatingBits693.java)
 | [Binary Search Tree to Greater Sum Tree - 1038](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree) | [Link](./BSTtoGreaterSumTree1038.java)
 | [Binary Tree Pruning - 814](https://leetcode.com/problems/binary-tree-pruning) | [Link](./binary_tree_pruning_814.py)
 | [Climbing Stairs - 70](https://leetcode.com/problems/climbing-stairs) | [Link](./ClimbingStairs70.java)

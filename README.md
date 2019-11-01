@@ -43,6 +43,7 @@ Solved the following problems -
 | [Number Complement - 476](https://leetcode.com/problems/number-complement/description/) | [Link](./number_complement_476.py)
 | [Number of Islands - 200](https://leetcode.com/problems/number-of-islands/) | [Link](./number_of_islands_200.py)
 | [Peak Index in a Mountain Array - 852](https://leetcode.com/problems/peak-index-in-a-mountain-array/description/) | [Link](./peak_index_mountain_852.py)
+| [Power of Two - 231](https://leetcode.com/problems/power-of-two/) | [Link](./PowerOfTwo231.java)
 | [Projection Area of 3D Shapes - 883](https://leetcode.com/problems/projection-area-of-3d-shapes/description/) | [Link](./projection_area_3d_shapes_883.py)
 | [Range Sum of BST - 938](https://leetcode.com/problems/range-sum-of-bst) | [Link](./RangeSumBST938.java)
 | [Reveal Cards In Increasing Order - 950](https://leetcode.com/problems/reveal-cards-in-increasing-order) | [Link](./RevealCardsIncOrder950.java)

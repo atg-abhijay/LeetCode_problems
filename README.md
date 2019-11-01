@@ -41,6 +41,7 @@ Solved the following problems -
 | [N-ary Tree Postorder Traversal - 590](https://leetcode.com/problems/n-ary-tree-postorder-traversal) | [Link1](./n-ary_tree_post_order_trav_590a.py) [Link2](n-ary_tree_post_order_trav_590b.py)
 | [Not Boring Movies - 620](https://leetcode.com/problems/not-boring-movies/description/) | [Link](./not_boring_movies_620.sql)
 | [Number Complement - 476](https://leetcode.com/problems/number-complement/description/) | [Link](./number_complement_476.py)
+| [Number of 1 Bits - 191](https://leetcode.com/problems/number-of-1-bits/) | [Link](./NumberOf1Bits191.java)
 | [Number of Islands - 200](https://leetcode.com/problems/number-of-islands/) | [Link](./number_of_islands_200.py)
 | [Peak Index in a Mountain Array - 852](https://leetcode.com/problems/peak-index-in-a-mountain-array/description/) | [Link](./peak_index_mountain_852.py)
 | [Power of Four - 342](https://leetcode.com/problems/power-of-four/) | [Link](./PowerOfFour342.java)

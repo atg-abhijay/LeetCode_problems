@@ -12,6 +12,16 @@ public class PowerOfFour342 {
 
 class Solution342 {
     public boolean isPowerOfFour(int num) {
-        return false;
+        if(num < 1) {
+            return false;
+        }
+        int numBinary = num;
+        while(numBinary > 1) {
+            if((numBinary & 11) != 0) {
+                return false;
+            }
+            numBinary = numBinary >> 2;
+        }
+        return true;
     }
 }

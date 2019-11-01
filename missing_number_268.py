@@ -10,4 +10,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        return -1
+        num_elements = len(nums) + 1
+        nums_set = set(nums)
+        for i in range(num_elements):
+            if i not in nums_set:
+                return i

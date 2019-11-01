@@ -12,6 +12,15 @@ public class BinaryNumberAlternatingBits693 {
 
 class Solution693 {
     public boolean hasAlternatingBits(int n) {
-        return false;
+        int previousBit = n & 1;
+        n = n >> 1;
+        while(n > 0) {
+            if(previousBit == (n & 1)) {
+                return false;
+            }
+            previousBit = n & 1;
+            n = n >> 1;
+        }
+        return true;
     }
 }

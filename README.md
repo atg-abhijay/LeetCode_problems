@@ -38,6 +38,7 @@ Solved the following problems -
 | [Maximum Level Sum of a Binary Tree - 1161](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree) | [Link](./max_level_sum_binary_tree_1161.py)
 | [Min Cost Climbing Stairs - 746](https://leetcode.com/problems/min-cost-climbing-stairs) | [Link](./MinCostClimbingStairs746.java)
 | [Minimum Falling Path Sum - 931](https://leetcode.com/problems/minimum-falling-path-sum) | [Link](./MinFallingPathSum931.java)
+| [Missing Number - 268](https://leetcode.com/problems/missing-number/) | [Link](./missing_number_268.py)
 | [N-ary Tree Postorder Traversal - 590](https://leetcode.com/problems/n-ary-tree-postorder-traversal) | [Link1](./n-ary_tree_post_order_trav_590a.py) [Link2](n-ary_tree_post_order_trav_590b.py)
 | [Not Boring Movies - 620](https://leetcode.com/problems/not-boring-movies/description/) | [Link](./not_boring_movies_620.sql)
 | [Number Complement - 476](https://leetcode.com/problems/number-complement/description/) | [Link](./number_complement_476.py)

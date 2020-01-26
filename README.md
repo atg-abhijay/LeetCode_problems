@@ -22,6 +22,7 @@ Solved the following problems -
 | [Contains Duplicate - 217](https://leetcode.com/problems/contains-duplicate/) | [Link](./contains_duplicate_217.py)
 | [Convert Sorted Array to Binary Search Tree - 108](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | [Link](./sorted_array_to_BST_108a.py)
 | [Counting Bits - 338](https://leetcode.com/problems/counting-bits) | [Link](./CountingBits338.java)
+| [Count Servers that Communicate - 1267](https://leetcode.com/problems/count-servers-that-communicate/) | [Link]()
 | [Find and Replace Pattern - 890](https://leetcode.com/problems/find-and-replace-pattern) | [Link](./find_and_replace_pattern_890.py)
 | [Find the Town Judge - 997](https://leetcode.com/problems/find-the-town-judge/) | [Link](./find_the_town_judge_997.py)
 | [Flipping An Image - 832](https://leetcode.com/problems/flipping-an-image/description/) | [Link](./flipping_image_832.py)

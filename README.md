@@ -36,6 +36,7 @@ Solved the following problems -
 | [Max Area of Island - 695](https://leetcode.com/problems/max-area-of-island/) | [Link](./max_area_of_island_695.py)
 | [Max Increase to Keep City Skyline - 807](https://leetcode.com/problems/max-increase-to-keep-city-skyline/description/) | [Link](./keep_city_skyline_807.py)
 | [Maximum Binary Tree - 654](https://leetcode.com/problems/maximum-binary-tree/description/) | [Link](./maximum_binary_tree_654.py)
+| [Maximum Depth of Binary Tree - 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [Link](./max_depth_binary_tree_104.py)
 | [Maximum Level Sum of a Binary Tree - 1161](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree) | [Link](./max_level_sum_binary_tree_1161.py)
 | [Minimum Cost Climbing Stairs - 746](https://leetcode.com/problems/min-cost-climbing-stairs) | [Link](./MinCostClimbingStairs746.java)
 | [Minimum Depth of Binary Tree - 111](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | [Link](min_depth_binary_tree_111.py)

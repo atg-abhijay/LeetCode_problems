@@ -13,4 +13,20 @@ class Node:
 
 class Solution:
     def maxDepth(self, root: 'Node') -> int:
-        return -1
+        if not root:
+            return 0
+
+        root.depth = 1
+        queue = [root]
+        max_depth = root.depth
+
+        while queue:
+            node = queue.pop(0)
+            if max_depth < node.depth:
+                max_depth = node.depth
+
+            for child in node.children:
+                child.depth = node.depth + 1
+                queue.append(child)
+
+        return max_depth

@@ -23,6 +23,7 @@ Solved the following problems -
 | [Convert Sorted Array to Binary Search Tree - 108](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | [Link](./sorted_array_to_BST_108a.py)
 | [Counting Bits - 338](https://leetcode.com/problems/counting-bits) | [Link](./CountingBits338.java)
 | [Find and Replace Pattern - 890](https://leetcode.com/problems/find-and-replace-pattern) | [Link](./find_and_replace_pattern_890.py)
+| [Find the Town Judge - 997](https://leetcode.com/problems/find-the-town-judge/) | [Link](./find_the_town_judge_997.py)
 | [Flipping An Image - 832](https://leetcode.com/problems/flipping-an-image/description/) | [Link](./flipping_image_832.py)
 | [Hamming Distance - 461](https://leetcode.com/problems/hamming-distance/description/) | [Link](./hamming_distance_461.py)
 | [Height Checker - 1051](https://leetcode.com/problems/height-checker) | [Link](./HeightChecker1051.java)

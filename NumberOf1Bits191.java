@@ -13,6 +13,11 @@ public class NumberOf1Bits191 {
 class Solution191 {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
+        /**
+         * use unsigned right shift operator.
+         * repeatedly extract rightmost bit
+         * until n becomes 0.
+         */
         int num1Bits = 0;
         while(n != 0) {
             num1Bits += (n & 1);

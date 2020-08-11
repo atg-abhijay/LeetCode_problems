@@ -60,6 +60,7 @@ Solved the following problems -
 | [Reverse String - 344](https://leetcode.com/problems/reverse-string/description/) | [Link](./reverse_string_344.py)
 | [Reverse Words in a String III - 557](https://leetcode.com/problems/reverse-words-in-a-string-iii/description/) | [Link](./reverse_words_in_string_III_557.py)
 | [Robot Return to Origin - 657](https://leetcode.com/problems/robot-return-to-origin/description/) | [Link](./robot_return_to_origin_657.py)
+| [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | [Link](./rotting-oranges.py)
 | [Search in a Binary Search Tree - 700](https://leetcode.com/problems/search-in-a-binary-search-tree) | [Link](./search_in_BST_700.py)
 | [Self Dividing Numbers - 728](https://leetcode.com/problems/self-dividing-numbers/description/) | [Link](./self_dividing_nums_728.py)
 | [Shortest Distance to a Character - 821](https://leetcode.com/problems/shortest-distance-to-a-character/description/) | [Link](./shortest_dist_to_char_821.py)

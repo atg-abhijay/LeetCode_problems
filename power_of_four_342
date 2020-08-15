@@ -1,0 +1,36 @@
+"""
+URL of problem:
+https://leetcode.com/explore/challenge/card/august-leetcoding-challenge/549/week-1-august-1st-august-7th/3412/
+https://leetcode.com/problems/power-of-four/
+"""
+
+
+class Solution(object):
+    def isPowerOfFour(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        # negative numbers and 0
+        # cannot be powers of 4
+        if num < 1:
+            return False
+
+        # 1. extract last bit repeatedly.
+        # if eqt 1, cannot be power of 4.
+        # 2. divide by 2 repeatedly, collect num_iters,
+        # if num_iters not divisible by 2, return False
+        num_iters = 0
+        remainder = 0
+        while num > 1:
+            remainder |= (num & 1)
+            if remainder:
+                return False
+
+            num >>= 1
+            num_iters += 1
+
+        if remainder or (num_iters & 1):
+            return False
+
+        return True

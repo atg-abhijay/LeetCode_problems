@@ -71,6 +71,7 @@ Solved the following problems -
 | [Subdomain Visit Count - 811](https://leetcode.com/problems/subdomain-visit-count/description/) | [Link](./subdomain_visit_count_811.py)
 | [Swap Salary - 627](https://leetcode.com/problems/swap-salary/description/) | [Link](./swap_salary_627.sql)
 | [To Lower Case - 709](https://leetcode.com/problems/to-lower-case/description/) | [Link](./to_lower_case_709.py)
+| [Total Hamming Distance - 477](https://leetcode.com/problems/total-hamming-distance/) | [Link](./TotalHammingDistance477.java)
 | [Transpose Matrix - 867](https://leetcode.com/problems/transpose-matrix/description/) | [Link](./transpose_matrix_867.py)
 | [Two Sum - 1](https://leetcode.com/problems/two-sum/) | [Link](./two_sum_1.py)
 | [Unique Morse Code Words - 804](https://leetcode.com/problems/unique-morse-code-words/description/) | [Link](./unique_morse_code_words_804.py)

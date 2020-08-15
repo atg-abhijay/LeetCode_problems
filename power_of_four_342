@@ -11,4 +11,20 @@ class Solution(object):
         :type num: int
         :rtype: bool
         """
-        return False
+        if num < 1:
+            return False
+
+        num_iters = 0
+        remainder = 0
+        while num > 1:
+            remainder |= (num & 1)
+            if remainder:
+                return False
+
+            num >>= 1
+            num_iters += 1
+
+        if remainder or (num_iters & 1):
+            return False
+
+        return True

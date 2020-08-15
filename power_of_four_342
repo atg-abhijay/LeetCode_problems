@@ -11,9 +11,15 @@ class Solution(object):
         :type num: int
         :rtype: bool
         """
+        # negative numbers and 0
+        # cannot be powers of 4
         if num < 1:
             return False
 
+        # 1. extract last bit repeatedly.
+        # if eqt 1, cannot be power of 4.
+        # 2. divide by 2 repeatedly, collect num_iters,
+        # if num_iters not divisible by 2, return False
         num_iters = 0
         remainder = 0
         while num > 1:

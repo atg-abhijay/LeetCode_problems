@@ -51,7 +51,7 @@ Solved the following problems -
 | [Number of 1 Bits - 191](https://leetcode.com/problems/number-of-1-bits/) | [Link](./NumberOf1Bits191.java)
 | [Number of Islands - 200](https://leetcode.com/problems/number-of-islands/) | [Link](./number_of_islands_200.py)
 | [Peak Index in a Mountain Array - 852](https://leetcode.com/problems/peak-index-in-a-mountain-array/description/) | [Link](./peak_index_mountain_852.py)
-| [Power of Four - 342](https://leetcode.com/problems/power-of-four/) | [Link](./PowerOfFour342.java)
+| [Power of Four - 342](https://leetcode.com/problems/power-of-four/) | [Link1](./PowerOfFour342.java) [Link2](./power_of_four_342.py)
 | [Power of Three - 326](https://leetcode.com/problems/power-of-three/) | [Link](./PowerOfThree326.java)
 | [Power of Two - 231](https://leetcode.com/problems/power-of-two/) | [Link](./PowerOfTwo231.java)
 | [Projection Area of 3D Shapes - 883](https://leetcode.com/problems/projection-area-of-3d-shapes/description/) | [Link](./projection_area_3d_shapes_883.py)

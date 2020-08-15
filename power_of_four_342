@@ -1,0 +1,14 @@
+"""
+URL of problem:
+https://leetcode.com/explore/challenge/card/august-leetcoding-challenge/549/week-1-august-1st-august-7th/3412/
+https://leetcode.com/problems/power-of-four/
+"""
+
+
+class Solution(object):
+    def isPowerOfFour(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        return False

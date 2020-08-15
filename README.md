@@ -46,6 +46,7 @@ Solved the following problems -
 | [Minimum Falling Path Sum - 931](https://leetcode.com/problems/minimum-falling-path-sum) | [Link](./MinFallingPathSum931.java)
 | [Missing Number - 268](https://leetcode.com/problems/missing-number/) | [Link](./missing_number_268.py)
 | [N-ary Tree Postorder Traversal - 590](https://leetcode.com/problems/n-ary-tree-postorder-traversal) | [Link1](./n-ary_tree_post_order_trav_590a.py) [Link2](n-ary_tree_post_order_trav_590b.py)
+| [Non-overlapping Intervals - 435](https://leetcode.com/problems/non-overlapping-intervals/) | [Link](./non_overlapping_intervals_435.py)
 | [Not Boring Movies - 620](https://leetcode.com/problems/not-boring-movies/description/) | [Link](./not_boring_movies_620.sql)
 | [Number Complement - 476](https://leetcode.com/problems/number-complement/description/) | [Link](./number_complement_476.py)
 | [Number of 1 Bits - 191](https://leetcode.com/problems/number-of-1-bits/) | [Link](./NumberOf1Bits191.java)

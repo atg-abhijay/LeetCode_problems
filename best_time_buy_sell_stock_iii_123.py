@@ -19,6 +19,11 @@ class Solution(object):
         is_tp_appended = False
         purchase_price = prices[0]
         for idx, selling_price in enumerate(prices):
+            # start a new transaction
+            # if SP < PP or SP < previous SP -
+            # the idea being to collect as many
+            # transactions as possible and selecting
+            # the best ones at the end.
             if selling_price < purchase_price or (idx > 0 and selling_price < prices[idx-1]):
                 purchase_price = selling_price
                 transaction_profits.append(trsac_profit)
@@ -30,9 +35,12 @@ class Solution(object):
 
                 is_tp_appended = False
 
+        # in case the last transaction
+        # profit hasn't been appended
         if not is_tp_appended:
             transaction_profits.append(trsac_profit)
 
+        # get the two highest profits
         max_profit = self.findAndPopMax(transaction_profits)
         max_profit += self.findAndPopMax(transaction_profits)
 

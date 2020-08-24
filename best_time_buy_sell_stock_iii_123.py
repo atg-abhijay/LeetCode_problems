@@ -22,6 +22,8 @@ class Solution(object):
             return 0
 
         transactions = self.generateAllTransactions(prices)
+        if not transactions:
+            return 0
         transactions.sort(key=lambda t: t.profit, reverse=True)
         best_trn = transactions[0]
         return best_trn.profit + self.slicePricesAndFindProfit(prices, transactions, best_trn)
@@ -51,10 +53,11 @@ class Solution(object):
             # if price < PP or price < previous SP -
             # the idea being to collect as many
             # transactions as possible.
-            if price < purchase_price or (idx > 0 and price < prices[idx-1]):
-                transactions.append(Transaction(
+            if price <= purchase_price or (idx > 0 and price < prices[idx-1]):
+                if trsac_profit != 0:
+                    transactions.append(Transaction(
                     purchase_idx, sell_idx, trsac_profit))
-                is_transaction_appended = True
+                    is_transaction_appended = True
 
                 purchase_price = price
                 purchase_idx = idx
@@ -68,7 +71,7 @@ class Solution(object):
 
         # in case the last transaction
         # profit hasn't been appended
-        if not is_transaction_appended:
+        if not is_transaction_appended and trsac_profit != 0:
             transactions.append(Transaction(
                 purchase_idx, sell_idx, trsac_profit))
 

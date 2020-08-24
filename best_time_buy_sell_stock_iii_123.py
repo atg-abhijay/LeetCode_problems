@@ -21,11 +21,15 @@ class Solution(object):
         if not prices:
             return 0
 
-        transactions = self.generateAllTransactions(prices)
+        transactions = self.generateAllTransactions(prices, False)
+        transactions += self.generateAllTransactions(prices, True)
         if not transactions:
             return 0
         transactions.sort(key=lambda t: t.profit, reverse=True)
         best_trn = transactions[0]
+        if len(transactions) > 1 and self.slicePricesAndFindProfit(prices, transactions, best_trn) == 0:
+            best_trn = transactions[1]
+
         return best_trn.profit + self.slicePricesAndFindProfit(prices, transactions, best_trn)
 
     def slicePricesAndFindProfit(self, prices, transactions, best_trn):
@@ -39,7 +43,7 @@ class Solution(object):
             suffix_prices = prices[best_trn.sell_idx+1:]
             return max(self.oneTransactionMaxProfit(prefix_prices), self.oneTransactionMaxProfit(suffix_prices))
 
-    def generateAllTransactions(self, prices):
+    def generateAllTransactions(self, prices, is_enabled):
         """
         :type prices: List[int]
         :rtype: List[Transaction]
@@ -53,7 +57,7 @@ class Solution(object):
             # if price < PP or price < previous SP -
             # the idea being to collect as many
             # transactions as possible.
-            if price <= purchase_price or (idx > 0 and price < prices[idx-1]):
+            if (not is_enabled and price <= purchase_price) or (is_enabled and idx > 0 and price < prices[idx-1]):
                 if trsac_profit != 0:
                     transactions.append(Transaction(
                     purchase_idx, sell_idx, trsac_profit))

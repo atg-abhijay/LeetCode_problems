@@ -53,7 +53,6 @@ class Solution(object):
         """
         trsac_profit, purchase_idx, sell_idx = 0, 0, 0
         transactions = []
-        is_transaction_appended = False
         purchase_price = prices[0]
         for idx, price in enumerate(prices):
             # start a new transaction
@@ -63,27 +62,15 @@ class Solution(object):
             condn_a = not is_enabled and price <= purchase_price
             condn_b = is_enabled and idx > 0 and price < prices[idx-1]
             if condn_a or condn_b:
-                if trsac_profit != 0 and not is_transaction_appended:
-                    transactions.append(Transaction(
-                        purchase_idx, sell_idx, trsac_profit))
-
                 purchase_price = price
                 purchase_idx = idx
                 trsac_profit = 0
-                is_transaction_appended = False
-            else:
-                if price - purchase_price > trsac_profit:
-                    trsac_profit = price - purchase_price
-                    sell_idx = idx
-                    transactions.append(Transaction(
-                        purchase_idx, sell_idx, trsac_profit))
-                    is_transaction_appended = True
 
-        # in case the last transaction
-        # profit hasn't been appended
-        if not is_transaction_appended and trsac_profit != 0:
-            transactions.append(Transaction(
-                purchase_idx, sell_idx, trsac_profit))
+            elif price - purchase_price > trsac_profit:
+                trsac_profit = price - purchase_price
+                sell_idx = idx
+                transactions.append(Transaction(
+                    purchase_idx, sell_idx, trsac_profit))
 
         return transactions
 

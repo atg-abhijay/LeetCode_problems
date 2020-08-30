@@ -36,12 +36,15 @@ class Solution(object):
         pchse_idxs = [t.pchse_idx for t in transactions]
         if best_trn.pchse_idx == min(pchse_idxs):
             return self.oneTransactionMaxProfit(prices[best_trn.sell_idx+1:])
+
         elif best_trn.pchse_idx == max(pchse_idxs):
             return self.oneTransactionMaxProfit(prices[:best_trn.pchse_idx])
+
         else:
             prefix_prices = prices[:best_trn.pchse_idx]
             suffix_prices = prices[best_trn.sell_idx+1:]
-            return max(self.oneTransactionMaxProfit(prefix_prices), self.oneTransactionMaxProfit(suffix_prices))
+            return max(self.oneTransactionMaxProfit(prefix_prices),
+                       self.oneTransactionMaxProfit(suffix_prices))
 
     def generateAllTransactions(self, prices, is_enabled):
         """
@@ -57,10 +60,12 @@ class Solution(object):
             # if price < PP or price < previous SP -
             # the idea being to collect as many
             # transactions as possible.
-            if (not is_enabled and price <= purchase_price) or (is_enabled and idx > 0 and price < prices[idx-1]):
+            condn_a = not is_enabled and price <= purchase_price
+            condn_b = is_enabled and idx > 0 and price < prices[idx-1]
+            if condn_a or condn_b:
                 if trsac_profit != 0:
                     transactions.append(Transaction(
-                    purchase_idx, sell_idx, trsac_profit))
+                        purchase_idx, sell_idx, trsac_profit))
                     is_transaction_appended = True
 
                 purchase_price = price
@@ -102,7 +107,9 @@ class Solution(object):
 
 
 def main():
-    print(Solution().maxProfit([8, 3, 6, 2, 8, 8, 8, 4, 2, 0, 7, 2, 9, 4, 9]))
+    print(Solution().maxProfit(
+        [8, 3, 6, 2, 8, 8, 8, 4, 2, 0, 7, 2, 9, 4, 9]
+    ))
 
 
 if __name__ == '__main__':

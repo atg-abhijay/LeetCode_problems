@@ -25,26 +25,69 @@ class Solution(object):
         transactions += self.generateAllTransactions(prices, True)
         if not transactions:
             return 0
-        transactions.sort(key=lambda t: t.profit, reverse=True)
-        best_trn = transactions[0]
-        if len(transactions) > 1 and self.slicePricesAndFindProfit(prices, transactions, best_trn) == 0:
-            best_trn = transactions[1]
 
-        return best_trn.profit + self.slicePricesAndFindProfit(prices, transactions, best_trn)
+        # Sort the transactions by their sell indexes
+        # and find the most recent non-overlapping
+        # predecessor transaction for each transaction
+        transactions.sort(key=lambda t: t.sell_idx)
+        pred_trn_idxs = []
+        for idx, t in enumerate(transactions):
+            pred_idx = idx - 1
+            while pred_idx > -1:
+                if transactions[pred_idx].sell_idx < t.pchse_idx:
+                    break
+                pred_idx -= 1
 
-    def slicePricesAndFindProfit(self, prices, transactions, best_trn):
-        pchse_idxs = [t.pchse_idx for t in transactions]
-        if best_trn.pchse_idx == min(pchse_idxs):
-            return self.oneTransactionMaxProfit(prices[best_trn.sell_idx+1:])
+            pred_trn_idxs.append(pred_idx)
 
-        elif best_trn.pchse_idx == max(pchse_idxs):
-            return self.oneTransactionMaxProfit(prices[:best_trn.pchse_idx])
+        max_profits = []
+        for idx, t in enumerate(transactions):
+            if pred_trn_idxs[idx] == -1:
+                pred_value = 0
+            else:
+                pred_value = self.findMaxProfitTransaction(
+                    transactions, pred_trn_idxs[idx])
 
-        else:
-            prefix_prices = prices[:best_trn.pchse_idx]
-            suffix_prices = prices[best_trn.sell_idx+1:]
-            return max(self.oneTransactionMaxProfit(prefix_prices),
-                       self.oneTransactionMaxProfit(suffix_prices))
+            if idx - 1 < 0:
+                previous_max = 0
+            else:
+                previous_max = max_profits[idx-1]
+
+            max_profits.append(max(t.profit + pred_value, previous_max))
+
+        return max_profits[-1]
+
+        # best_trns = self.findBestTransactions(
+        #     len(transactions)-1, transactions, pred_trn_idxs, max_profits)
+
+        # return self.maxProfitFromBestKTransactions(2, best_trns)
+
+    def findMaxProfitTransaction(self, transactions, last_idx):
+        max_profit_so_far = 0
+        for t in transactions[:last_idx+1]:
+            if t.profit > max_profit_so_far:
+                max_profit_so_far = t.profit
+
+        return max_profit_so_far
+
+    # def maxProfitFromBestKTransactions(self, k, best_trns):
+    #     best_trns.sort(key=lambda t: t.profit)
+    #     max_profit = 0
+    #     while k > 0 and best_trns:
+    #         max_profit += best_trns.pop().profit
+    #         k -= 1
+
+    #     return max_profit
+
+    # def findBestTransactions(self, idx, transactions, pred_trn_idxs, max_profits):
+    #     if idx < 0:
+    #         return []
+
+    #     elif transactions[idx].profit + transactions[pred_trn_idxs[idx]].profit > max_profits[idx-1]:
+    #         return [transactions[idx]] + self.findBestTransactions(pred_trn_idxs[idx], transactions, pred_trn_idxs, max_profits)
+
+    #     else:
+    #         return self.findBestTransactions(idx-1, transactions, pred_trn_idxs, max_profits)
 
     def generateAllTransactions(self, prices, is_enabled):
         """
@@ -74,29 +117,10 @@ class Solution(object):
 
         return transactions
 
-    def oneTransactionMaxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
-        if not prices:
-            return 0
-
-        max_profit = 0
-        purchase_price = prices[0]
-        for selling_price in prices:
-            if selling_price < purchase_price:
-                purchase_price = selling_price
-            else:
-                if selling_price - purchase_price > max_profit:
-                    max_profit = selling_price - purchase_price
-
-        return max_profit
-
 
 def main():
     print(Solution().maxProfit(
-        [1, 1, 2, 2, 1, 1, 3, 3, 2, 4, 6, 3, 10, 5, 3]
+        [1,2,4,2,5,7,2,4,9,0]
     ))
 
 

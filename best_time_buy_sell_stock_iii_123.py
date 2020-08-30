@@ -63,20 +63,21 @@ class Solution(object):
             condn_a = not is_enabled and price <= purchase_price
             condn_b = is_enabled and idx > 0 and price < prices[idx-1]
             if condn_a or condn_b:
-                if trsac_profit != 0:
+                if trsac_profit != 0 and not is_transaction_appended:
                     transactions.append(Transaction(
                         purchase_idx, sell_idx, trsac_profit))
-                    is_transaction_appended = True
 
                 purchase_price = price
                 purchase_idx = idx
                 trsac_profit = 0
+                is_transaction_appended = False
             else:
                 if price - purchase_price > trsac_profit:
                     trsac_profit = price - purchase_price
                     sell_idx = idx
-
-                is_transaction_appended = False
+                    transactions.append(Transaction(
+                        purchase_idx, sell_idx, trsac_profit))
+                    is_transaction_appended = True
 
         # in case the last transaction
         # profit hasn't been appended
@@ -108,7 +109,7 @@ class Solution(object):
 
 def main():
     print(Solution().maxProfit(
-        [8, 3, 6, 2, 8, 8, 8, 4, 2, 0, 7, 2, 9, 4, 9]
+        [1, 1, 2, 2, 1, 1, 3, 3, 2, 4, 6, 3, 10, 5, 3]
     ))
 
 

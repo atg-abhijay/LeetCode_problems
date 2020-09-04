@@ -46,6 +46,7 @@ class Solution(object):
             if pred_trn_idxs[idx] == -1:
                 pred_value = 0
             else:
+                # pred_value = max_profits[pred_trn_idxs[idx]]
                 pred_value = self.findMaxProfitTransaction(
                     transactions, pred_trn_idxs[idx])
 
@@ -56,39 +57,11 @@ class Solution(object):
 
             max_profits.append(max(t.profit + pred_value, previous_max))
 
-        return max_profits[-1]
-
         # best_trns = self.findBestTransactions(
         #     len(transactions)-1, transactions, pred_trn_idxs, max_profits)
 
         # return self.maxProfitFromBestKTransactions(2, best_trns)
-
-    def findMaxProfitTransaction(self, transactions, last_idx):
-        max_profit_so_far = 0
-        for t in transactions[:last_idx+1]:
-            if t.profit > max_profit_so_far:
-                max_profit_so_far = t.profit
-
-        return max_profit_so_far
-
-    # def maxProfitFromBestKTransactions(self, k, best_trns):
-    #     best_trns.sort(key=lambda t: t.profit)
-    #     max_profit = 0
-    #     while k > 0 and best_trns:
-    #         max_profit += best_trns.pop().profit
-    #         k -= 1
-
-    #     return max_profit
-
-    # def findBestTransactions(self, idx, transactions, pred_trn_idxs, max_profits):
-    #     if idx < 0:
-    #         return []
-
-    #     elif transactions[idx].profit + transactions[pred_trn_idxs[idx]].profit > max_profits[idx-1]:
-    #         return [transactions[idx]] + self.findBestTransactions(pred_trn_idxs[idx], transactions, pred_trn_idxs, max_profits)
-
-    #     else:
-    #         return self.findBestTransactions(idx-1, transactions, pred_trn_idxs, max_profits)
+        return max_profits[-1]
 
     def generateAllTransactions(self, prices):
         """
@@ -121,6 +94,33 @@ class Solution(object):
                         pp_idx, sp_idx, trsac_profit))
 
         return transactions
+
+    def findMaxProfitTransaction(self, transactions, last_idx):
+        max_profit_so_far = 0
+        for t in transactions[:last_idx+1]:
+            if t.profit > max_profit_so_far:
+                max_profit_so_far = t.profit
+
+        return max_profit_so_far
+
+    # def maxProfitFromBestKTransactions(self, k, best_trns):
+    #     best_trns.sort(key=lambda t: t.profit)
+    #     max_profit = 0
+    #     while k > 0 and best_trns:
+    #         max_profit += best_trns.pop().profit
+    #         k -= 1
+
+    #     return max_profit
+
+    # def findBestTransactions(self, idx, transactions, pred_trn_idxs, max_profits):
+    #     if idx < 0:
+    #         return []
+
+    #     elif transactions[idx].profit + transactions[pred_trn_idxs[idx]].profit > max_profits[idx-1]:
+    #         return [transactions[idx]] + self.findBestTransactions(pred_trn_idxs[idx], transactions, pred_trn_idxs, max_profits)
+
+    #     else:
+    #         return self.findBestTransactions(idx-1, transactions, pred_trn_idxs, max_profits)
 
 
 def main():

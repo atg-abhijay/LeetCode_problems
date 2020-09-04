@@ -42,13 +42,13 @@ class Solution(object):
             pred_trn_idxs.append(pred_idx)
 
         max_profits = []
+        max_profits_till_idx = self.generateMaxProfitsTillEachIndex(transactions)
         for idx, t in enumerate(transactions):
             if pred_trn_idxs[idx] == -1:
                 pred_value = 0
             else:
                 # pred_value = max_profits[pred_trn_idxs[idx]]
-                pred_value = self.findMaxProfitTransaction(
-                    transactions, pred_trn_idxs[idx])
+                pred_value = max_profits_till_idx[pred_trn_idxs[idx]]
 
             if idx - 1 < 0:
                 previous_max = 0
@@ -95,13 +95,17 @@ class Solution(object):
 
         return transactions
 
-    def findMaxProfitTransaction(self, transactions, last_idx):
-        max_profit_so_far = 0
-        for t in transactions[:last_idx+1]:
-            if t.profit > max_profit_so_far:
-                max_profit_so_far = t.profit
+    def generateMaxProfitsTillEachIndex(self, transactions):
+        profits_till_idx = []
+        previous_max = 0
+        for t in transactions:
+            if previous_max < t.profit:
+                profits_till_idx.append(t.profit)
+                previous_max = t.profit
+            else:
+                profits_till_idx.append(previous_max)
 
-        return max_profit_so_far
+        return profits_till_idx
 
     # def maxProfitFromBestKTransactions(self, k, best_trns):
     #     best_trns.sort(key=lambda t: t.profit)

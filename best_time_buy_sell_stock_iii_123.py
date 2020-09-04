@@ -4,6 +4,8 @@ https://leetcode.com/explore/challenge/card/august-leetcoding-challenge/551/week
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/
 """
 
+from collections import deque
+
 
 class Transaction(object):
     def __init__(self, pchse_idx, sell_idx, profit):
@@ -21,8 +23,7 @@ class Solution(object):
         if not prices:
             return 0
 
-        transactions = self.generateAllTransactions(prices, False)
-        transactions += self.generateAllTransactions(prices, True)
+        transactions = self.generateAllTransactions(prices)
         if not transactions:
             return 0
 
@@ -89,38 +90,42 @@ class Solution(object):
     #     else:
     #         return self.findBestTransactions(idx-1, transactions, pred_trn_idxs, max_profits)
 
-    def generateAllTransactions(self, prices, is_enabled):
+    def generateAllTransactions(self, prices):
         """
         :type prices: List[int]
         :rtype: List[Transaction]
         """
-        trsac_profit, purchase_idx, sell_idx = 0, 0, 0
         transactions = []
-        purchase_price = prices[0]
-        for idx, price in enumerate(prices):
-            # start a new transaction
-            # if price < PP or price < previous SP -
-            # the idea being to collect as many
-            # transactions as possible.
-            condn_a = not is_enabled and price <= purchase_price
-            condn_b = is_enabled and idx > 0 and price < prices[idx-1]
-            if condn_a or condn_b:
-                purchase_price = price
-                purchase_idx = idx
-                trsac_profit = 0
+        prices_queue = deque([(0, prices[0])])
+        idx_in_queue = [0 for x in range(len(prices))]
+        while prices_queue:
+            trsac_profit = 0
+            pp_idx, purchase_price = prices_queue.popleft()
+            for sp_idx, sell_price in enumerate(prices[pp_idx+1:]):
+                sp_idx = sp_idx + pp_idx + 1
+                condn_a = sell_price <= purchase_price
+                condn_b = sp_idx > 0 and sell_price < prices[sp_idx-1]
+                if condn_a:
+                    if not idx_in_queue[sp_idx]:
+                        prices_queue.append((sp_idx, sell_price))
+                        idx_in_queue[sp_idx] = 1
+                    break
 
-            elif price - purchase_price > trsac_profit:
-                trsac_profit = price - purchase_price
-                sell_idx = idx
-                transactions.append(Transaction(
-                    purchase_idx, sell_idx, trsac_profit))
+                elif condn_b and not idx_in_queue[sp_idx]:
+                    idx_in_queue[sp_idx] = 1
+                    prices_queue.append((sp_idx, sell_price))
+
+                elif sell_price - purchase_price > trsac_profit:
+                    trsac_profit = sell_price - purchase_price
+                    transactions.append(Transaction(
+                        pp_idx, sp_idx, trsac_profit))
 
         return transactions
 
 
 def main():
     print(Solution().maxProfit(
-        [1,2,4,2,5,7,2,4,9,0]
+        [6, 5, 4, 8, 6, 8, 7, 8, 9, 4, 5]
     ))
 
 

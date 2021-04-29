@@ -75,3 +75,4 @@ Solved the following problems -
 | [Transpose Matrix - 867](https://leetcode.com/problems/transpose-matrix/description/) | [Link](./transpose_matrix_867.py)
 | [Two Sum - 1](https://leetcode.com/problems/two-sum/) | [Link](./two_sum_1.py)
 | [Unique Morse Code Words - 804](https://leetcode.com/problems/unique-morse-code-words/description/) | [Link](./unique_morse_code_words_804.py)
+| [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/) | [Link](./verifying_alien_dictionary_953.py)

@@ -62,6 +62,7 @@ Platform for coding questions in different fields and at different levels. Using
 | [Power of Two - 231](https://leetcode.com/problems/power-of-two/) | [Link](./PowerOfTwo231.java)
 | [Projection Area of 3D Shapes - 883](https://leetcode.com/problems/projection-area-of-3d-shapes/description/) | [Link](./projection_area_3d_shapes_883.py)
 | [Range Sum of BST - 938](https://leetcode.com/problems/range-sum-of-bst) | [Link](./RangeSumBST938.java)
+| [Reducing Dishes - 1402](https://leetcode.com/problems/reducing-dishes/) | [Link](./reducing_dishes_1402.py)
 | [Reveal Cards In Increasing Order - 950](https://leetcode.com/problems/reveal-cards-in-increasing-order) | [Link](./RevealCardsIncOrder950.java)
 | [Reverse Integer - 7](https://leetcode.com/problems/reverse-integer/description/) | [Link](./reverse_int_7.py)
 | [Reverse String - 344](https://leetcode.com/problems/reverse-string/description/) | [Link](./reverse_string_344.py)

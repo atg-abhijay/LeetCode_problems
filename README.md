@@ -4,7 +4,11 @@ My LeetCode profile: [atg-abhijay](https://leetcode.com/atg-abhijay/)
 
 Platform for coding questions in different fields and at different levels. Using it to expand ways of thinking and increase proficiency as a coder.
 
-Solved the following problems -
+## Current Status
+
+![Current status](./current-status.png)
+
+## Solved Problems
 
 | Problem       | Solution |
 | --------------|----------|
@@ -75,4 +79,4 @@ Solved the following problems -
 | [Transpose Matrix - 867](https://leetcode.com/problems/transpose-matrix/description/) | [Link](./transpose_matrix_867.py)
 | [Two Sum - 1](https://leetcode.com/problems/two-sum/) | [Link](./two_sum_1.py)
 | [Unique Morse Code Words - 804](https://leetcode.com/problems/unique-morse-code-words/description/) | [Link](./unique_morse_code_words_804.py)
-| [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/) | [Link](./verifying_alien_dictionary_953.py)
+| [Verifying an Alien Dictionary - 953](https://leetcode.com/problems/verifying-an-alien-dictionary/) | [Link](./verifying_alien_dictionary_953.py)
